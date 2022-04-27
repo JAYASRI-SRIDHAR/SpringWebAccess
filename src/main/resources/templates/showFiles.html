@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="hrrp://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"></meta>
+<title>Insert Title here</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+#mainheading{
+color:black;
+ background-color:powderblue;
+text-align:center;
+}
+div{
+margin-top:50px;
+ margin-bottom:50px;
+align-items: center;
+
+justify-content: center;
+display: flex;
+ }
+</style>
+</head>
+
+</br>
+</br>
+<h1 id="mainheading">Web Accessibility Scan Engine</h1>
+<div>
+
+</br>
+<h3>The Scanned Results are provided in the PDF below:</h3>
+</div>
+<div th:each="file: ${files}">
+<a th:href="@{'/file/'+${file.getName()}}"><span th:text="${file.getName()}"/></a>&nbsp;
+<span th:text="${file.length()/1024}"/>KB</div>
+
+</html>

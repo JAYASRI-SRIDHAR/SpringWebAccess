@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+<meta charset="ISO-8859-1"></meta>
+<title>Web Accessibility Scan Engine</title>
+
+<script type="text/javascript">
+
+//$(document).ready(function() {
+
+//    var $submit = $("#FrstSubbtn").hide(),
+//        $cbs = $('input[name="Axe"]').click(function() {
+//            $submit.toggle( $cbs.is(":checked") );
+//        });
+//
+//});
+</script>
+<style>
+@charset "ISO-8859-1";
+*{
+    margin: 0;
+    padding: 0;
+}
+#mainheading{
+color:black;
+ background-color:powderblue;
+text-align:center;
+}
+div{
+margin-top:50px;
+ margin-bottom:50px;
+align-items: center;
+
+justify-content: center;
+display: flex;
+ }
+#FrstSubbtn{
+background:#003066;
+color:white;
+border-style: outset;
+ border-color: #032852;
+height:50px;
+width:100px;
+ font :bold 15px
+arial, sans-serif;
+}
+
+ #FrstSubbtn:hover{
+background:#4badfe;
+color:#fff;
+border:1px solid #eee;
+border-radius: 5px;
+
+}
+#image{
+max-width: 100%;
+max-height:100vh;
+margin: auto;
+}
+#image1{
+
+    max-width: 100%;
+    max-height:100vh;
+    margin: auto;
+}
+.right {
+    text-align: right;
+    float: right;
+    margin: auto;
+    margin-right:30px;
+}
+</style>
+
+</head>
+<body>
+</br>
+</br>
+<h1 id="mainheading">Web Accessibility Scan Engine</h1>
+
+</br>
+
+<form action="showFiles.html" method="post">
+<div class="group">
+
+<label>Enter the URL : </label>
+<input name="urlname" type="url" id="url" placeholder="Kindly enter the url here" required>
+<table>
+ <tr>
+ <td><input type="radio" id="web" name="cmnrb" required><label> Web</label></td>
+ </tr>
+ <tr>
+    <td><input type="radio" disabled="disabled" id="mbl " name="cmnrb"><label> Mobile</label>
+    </td>
+    </tr>
+    
+   </table>
+   </div>
+   <div>
+   <table>
+   <tr>
+   <td><input type="checkbox" id="Axe" name="Axe" required><label> Axe Expert Scan</label></td>
+   </tr>
+   <tr>
+   <td><input type="checkbox" id="clr" name="clr" required><label> Color Contrast Analysis </label>
+   </td>
+   </tr>
+   
+    <td><input type="checkbox" disabled="disabled" id="keyb" name="keyb"><label> Keyboard Navigation</label>
+   </td>
+   
+   </tr>
+   
+    <td><input type="checkbox" disabled="disabled" id="scrnr" name="scrnr"><label> Screen Reader</label>
+    </td>
+    </tr>
+   </table>
+    </div>
+    <div>
+    <button type="submit" id="FrstSubbtn" class="Link1" >Scan</button>
+    <h2 th:text="${message}"></h2>
+
+   
+    </div>
+</form>
+    </body>
+    </html>
